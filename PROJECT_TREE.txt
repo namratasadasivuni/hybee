@@ -1,0 +1,216 @@
+HYBEE PROJECT - COMPLETE FOLDER TREE
+====================================
+
+hybee/
+│
+├── 📁 client/                          [FRONTEND - React + Vite]
+│   ├── public/
+│   │   ├── favicon.ico
+│   │   └── robots.txt
+│   │
+│   ├── src/
+│   │   ├── 📁 pages/                   [PAGE COMPONENTS]
+│   │   │   ├── Home.tsx                → Homepage (hero, featured products)
+│   │   │   ├── Products.tsx            → Product listing with filters
+│   │   │   ├── ProductDetail.tsx       → Single product page
+│   │   │   ├── Cart.tsx                → Shopping cart
+│   │   │   ├── Checkout.tsx            → Checkout flow
+│   │   │   ├── Profile.tsx             → User profile & orders
+│   │   │   ├── AdminPanel.tsx          → Admin dashboard
+│   │   │   └── NotFound.tsx            → 404 page
+│   │   │
+│   │   ├── 📁 components/              [REUSABLE COMPONENTS]
+│   │   │   ├── Navigation.tsx          → Top nav bar
+│   │   │   ├── Footer.tsx              → Footer
+│   │   │   ├── ErrorBoundary.tsx       → Error handling
+│   │   │   ├── DashboardLayout.tsx     → Admin layout
+│   │   │   ├── Map.tsx                 → Google Maps
+│   │   │   └── 📁 ui/                  [shadcn/ui Components]
+│   │   │       ├── button.tsx
+│   │   │       ├── card.tsx
+│   │   │       ├── input.tsx
+│   │   │       ├── select.tsx
+│   │   │       ├── dialog.tsx
+│   │   │       ├── tabs.tsx
+│   │   │       ├── badge.tsx
+│   │   │       └── ... (15+ more)
+│   │   │
+│   │   ├── 📁 contexts/                [REACT CONTEXTS]
+│   │   │   ├── ThemeContext.tsx        → Dark/light theme
+│   │   │   └── AuthContext.tsx         → Authentication
+│   │   │
+│   │   ├── 📁 hooks/                   [CUSTOM HOOKS]
+│   │   │   ├── useAuth.ts              → Auth hook
+│   │   │   ├── useTheme.ts             → Theme hook
+│   │   │   └── useCart.ts              → Cart hook
+│   │   │
+│   │   ├── 📁 lib/                     [UTILITIES]
+│   │   │   ├── trpc.ts                 → tRPC client setup
+│   │   │   └── utils.ts                → Helper functions
+│   │   │
+│   │   ├── 📁 _core/                   [CORE UTILITIES]
+│   │   │   ├── hooks/
+│   │   │   │   └── useAuth.ts
+│   │   │   └── env.ts
+│   │   │
+│   │   ├── App.tsx                     → Main app with routes
+│   │   ├── main.tsx                    → React entry point
+│   │   ├── index.css                   → Global styles & Tailwind
+│   │   ├── const.ts                    → Frontend constants
+│   │   └── vite.config.ts              → Vite config
+│   │
+│   └── index.html                      → HTML entry point
+│
+├── 📁 server/                          [BACKEND - Express + tRPC]
+│   ├── 📁 routers/                     [API ROUTE HANDLERS]
+│   │   ├── products.ts                 → Product APIs
+│   │   ├── cart.ts                     → Cart APIs
+│   │   ├── orders.ts                   → Order APIs
+│   │   ├── reviews.ts                  → Review APIs
+│   │   └── profile.ts                  → Profile APIs
+│   │
+│   ├── routers.ts                      → Main router setup
+│   │   ├── system router
+│   │   ├── auth router
+│   │   ├── products router
+│   │   ├── cart router
+│   │   ├── orders router
+│   │   ├── reviews router
+│   │   └── profile router
+│   │
+│   ├── db.ts                           → Database queries
+│   │   ├── getDb()
+│   │   ├── upsertUser()
+│   │   ├── getProducts()
+│   │   ├── getCart()
+│   │   ├── createOrder()
+│   │   └── ... (20+ queries)
+│   │
+│   ├── 📁 _core/                       [CORE FRAMEWORK]
+│   │   ├── index.ts                    → Server entry point
+│   │   ├── context.ts                  → tRPC context
+│   │   ├── trpc.ts                     → tRPC setup
+│   │   ├── cookies.ts                  → Cookie handling
+│   │   ├── oauth.ts                    → OAuth flow
+│   │   ├── env.ts                      → Environment vars
+│   │   ├── llm.ts                      → LLM integration
+│   │   ├── imageGeneration.ts          → Image generation
+│   │   ├── voiceTranscription.ts       → Voice to text
+│   │   ├── map.ts                      → Google Maps
+│   │   ├── notification.ts             → Notifications
+│   │   └── systemRouter.ts             → System routes
+│   │
+│   ├── storage.ts                      → S3 storage helpers
+│   ├── auth.logout.test.ts             → Test example
+│   └── tsconfig.json                   → TypeScript config
+│
+├── 📁 drizzle/                         [DATABASE]
+│   ├── schema.ts                       → Database tables
+│   │   ├── users table
+│   │   ├── products table
+│   │   ├── cart table
+│   │   ├── orders table
+│   │   ├── orderItems table
+│   │   └── reviews table
+│   │
+│   └── 📁 migrations/                  [AUTO-GENERATED SQL]
+│       ├── 0001_*.sql                  → Initial schema
+│       ├── 0002_*.sql                  → Updates
+│       └── ... (more migrations)
+│
+├── 📁 shared/                          [SHARED CODE]
+│   ├── const.ts                        → Shared constants
+│   ├── types.ts                        → Shared types
+│   └── utils.ts                        → Shared utilities
+│
+├── 📁 storage/                         [S3 STORAGE]
+│   └── index.ts                        → S3 helpers
+│
+├── 📄 Configuration Files
+│   ├── package.json                    → Dependencies & scripts
+│   ├── tsconfig.json                   → TypeScript config
+│   ├── vite.config.ts                  → Vite config
+│   ├── .env                            → Environment variables (LOCAL)
+│   └── .gitignore                      → Git ignore rules
+│
+└── 📄 Documentation Files
+    ├── README.md                       → Project overview
+    ├── GITHUB_GUIDE.md                 → GitHub instructions
+    ├── VSCODE_GUIDE.md                 → VS Code setup
+    ├── DEPLOYMENT.md                   → Deployment guide
+    ├── LOCAL_SETUP_GUIDE.md            → Local setup steps
+    ├── FOLDER_STRUCTURE.md             → THIS DETAILED GUIDE
+    ├── IMAGE_URLS.md                   → CDN image URLs
+    └── PROJECT_TREE.txt                → THIS FILE
+
+================================================================================
+
+KEY DIRECTORIES EXPLAINED:
+
+📁 /client/src/pages/
+   └─ Contains 8 page components, each is a full page route
+   └─ Edit these to change page content and layout
+
+📁 /client/src/components/
+   └─ Contains 15+ reusable components
+   └─ Use these in pages to build UI
+
+📁 /server/routers.ts
+   └─ Main file with all API endpoints
+   └─ Edit to add/modify APIs
+
+📁 /server/db.ts
+   └─ Contains all database queries
+   └─ Edit to add/modify database operations
+
+📁 /drizzle/schema.ts
+   └─ Database table definitions
+   └─ Edit to add/modify database tables
+
+📁 /client/src/index.css
+   └─ Global styles and Tailwind configuration
+   └─ Edit to change colors and theme
+
+================================================================================
+
+QUICK EDIT GUIDE:
+
+Change Homepage          → Edit: client/src/pages/Home.tsx
+Change Navigation        → Edit: client/src/components/Navigation.tsx
+Change Footer            → Edit: client/src/components/Footer.tsx
+Change Colors/Theme      → Edit: client/src/index.css
+Add New Page             → Create: client/src/pages/NewPage.tsx
+Add New Component        → Create: client/src/components/NewComponent.tsx
+Add New API              → Edit: server/routers.ts
+Add New Database Query   → Edit: server/db.ts
+Add New Table            → Edit: drizzle/schema.ts
+
+================================================================================
+
+DATA FLOW:
+
+User Action (Click)
+    ↓
+React Component (pages/Home.tsx)
+    ↓
+tRPC Hook (useQuery/useMutation)
+    ↓
+Backend Router (server/routers.ts)
+    ↓
+Database Query (server/db.ts)
+    ↓
+Database (MySQL)
+    ↓
+Response
+    ↓
+Component Updates UI
+    ↓
+User Sees Result
+
+================================================================================
+
+TOTAL FILES: 50+
+TOTAL LINES OF CODE: 5000+
+READY FOR: Development, Customization, Deployment
+
+================================================================================
